@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Titanic</title>
+  </head>
+  <body>
+    <h1>Home - Titanic</h1>
+    <a href="{% url 'result'%}">Go to results page</a>
+
+    <h3>Get your titanic predictions here!</h3>
+    <p>Enter in the details of a random passenger name:</p>
+    <p>We will output a prediction</p>
+
+    <form action="{% url 'result' %}">
+      <!--for the CSRR error, input below -->
+      {% csrf_token %}
+      <p>Result</p>
+      <input type="text" name="age">
+      <!--variables
+pclass,sex,age,sibsp,parch,fare,embarked
+
+    <p>Pclass</p>
+    <input type="text" name="pclass">
+    <p>Sex</p>
+    <input type="text" name="sex">
+    <p>Age</p>
+    <input type="text" name="age">
+    <p>Sibsp</p>
+    <input type="text" name="sibsp">
+    <p>Parch</p>
+    <input type="text" name="parch">
+    <p>Fare</p>
+    <input type="text" name="fare">
+    <p>Embarked</p>
+    <input type="text" name="embarked">
+-->
+    <input type="submit">
+
+    </form>
+  </body>
+</html>
